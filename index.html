@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarDekho - Find Your Right Car</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== HEADER / NAVBAR ====== -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">Car<span>Dekho</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#new-cars">New Cars</a></li>
+          <li><a href="#used-cars">Used Cars</a></li>
+          <li><a href="#compare">Compare</a></li>
+          <li><a href="#electric">Electric</a></li>
+          <li><a href="#brands">Brands</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">
+          <span class="dark-toggle-icon">&#9790;</span>
+        </button>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== HERO / SEARCH ====== -->
+  <section class="hero">
+    <h1>Find Your Right Car</h1>
+    <div class="search-box">
+      <div class="search-tabs">
+        <button class="search-tab active" onclick="switchSearchTab(this, 'budget')">By Budget</button>
+        <button class="search-tab" onclick="switchSearchTab(this, 'brand')">By Brand</button>
+      </div>
+      <div class="search-inputs" id="searchInputs">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MOST SEARCHED CARS ====== -->
+  <section class="section" id="new-cars">
+    <h2 class="section-title">Most Searched Cars</h2>
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="filterCars(this, 'all')">All</button>
+      <button class="cat-tab" onclick="filterCars(this, 'suv')">SUV</button>
+      <button class="cat-tab" onclick="filterCars(this, 'hatchback')">Hatchback</button>
+      <button class="cat-tab" onclick="filterCars(this, 'sedan')">Sedan</button>
+    </div>
+    <div class="car-grid" id="carGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- ====== ELECTRIC CARS ====== -->
+  <section class="section section-alt" id="electric">
+    <h2 class="section-title">Electric Cars</h2>
+    <div class="scroll-row" id="evRow">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- ====== POPULAR BRANDS ====== -->
+  <section class="section" id="brands">
+    <h2 class="section-title">Popular Brands</h2>
+    <div class="brands-grid" id="brandsGrid">
+      <!-- Brands injected by JS -->
+    </div>
+  </section>
+
+  <!-- ====== COMPARE CARS ====== -->
+  <section class="section section-alt" id="compare">
+    <h2 class="section-title">Compare Cars</h2>
+    <div class="compare-grid" id="compareGrid">
+      <!-- Comparisons injected by JS -->
+    </div>
+  </section>
+
+  <!-- ====== USED CARS ====== -->
+  <section class="section" id="used-cars">
+    <h2 class="section-title">Used Cars Near You</h2>
+    <div class="car-grid" id="usedCarGrid">
+      <!-- Used car cards injected by JS -->
+    </div>
+    <h3 class="subsection-title">Browse Used Cars by City</h3>
+    <div class="city-grid" id="cityGrid">
+      <!-- Cities injected by JS -->
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h4>CarDekho</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>New Cars</h4>
+        <ul>
+          <li><a href="#">By Brand</a></li>
+          <li><a href="#">By Budget</a></li>
+          <li><a href="#">By Body Type</a></li>
+          <li><a href="#">Upcoming Cars</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Used Cars</h4>
+        <ul>
+          <li><a href="#">Delhi</a></li>
+          <li><a href="#">Mumbai</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Chennai</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect With Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 CarDekho Mock Website. For educational purposes only.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details - CarDekho</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Car<span>Dekho</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#new-cars">New Cars</a></li>
+          <li><a href="index.html#used-cars">Used Cars</a></li>
+          <li><a href="index.html#compare">Compare</a></li>
+          <li><a href="index.html#electric">Electric</a></li>
+          <li><a href="index.html#brands">Brands</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">
+          <span class="dark-toggle-icon">&#9790;</span>
+        </button>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== BREADCRUMB ====== -->
+  <div class="detail-page">
+    <div class="breadcrumb" id="breadcrumb">
+      <a href="index.html">Home</a> &rsaquo; <span id="breadcrumbCar">...</span>
+    </div>
+
+    <!-- ====== CAR HERO ====== -->
+    <div class="detail-hero" id="detailHero">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- ====== KEY SPECS ====== -->
+    <div class="specs-bar" id="specsBar">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- ====== VARIANTS TABLE ====== -->
+    <div class="variants-section">
+      <h2 class="section-title">Variants & Prices</h2>
+      <div class="filter-row" id="filterRow">
+        <!-- Fuel/Transmission filters populated by JS -->
+      </div>
+      <div class="variants-table-wrap">
+        <table class="variants-table" id="variantsTable">
+          <thead id="variantsHead">
+            <!-- Populated by JS -->
+          </thead>
+          <tbody id="variantsBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ====== BACK ====== -->
+    <div class="back-row">
+      <a href="index.html" class="back-btn">&larr; Back to all cars</a>
+    </div>
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h4>CarDekho</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#new-cars">New Cars</a></li>
+          <li><a href="index.html#used-cars">Used Cars</a></li>
+          <li><a href="index.html#compare">Compare Cars</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 CarDekho Mock Website. For educational purposes only.
+    </div>
+  </footer>
+
+  <script src="detail.js"></script>
+</body>
+</html>
