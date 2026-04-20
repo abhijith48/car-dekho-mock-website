@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Cars - CarDekho</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="compare.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Car<span>Dekho</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#new-cars">New Cars</a></li>
+          <li><a href="index.html#used-cars">Used Cars</a></li>
+          <li><a href="index.html#compare">Compare</a></li>
+          <li><a href="index.html#electric">Electric</a></li>
+          <li><a href="index.html#brands">Brands</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">
+          <span class="dark-toggle-icon">&#9790;</span>
+        </button>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="compare-page">
+    <h1 class="page-title">Compare Cars</h1>
+    <p class="page-subtitle">Select two cars to compare their features side by side</p>
+
+    <!-- Car Selectors -->
+    <div class="selector-row">
+      <div class="selector-card" id="selector1">
+        <select id="carSelect1" onchange="updateComparison()">
+          <option value="">Select Car 1</option>
+        </select>
+        <div class="selector-preview" id="preview1"></div>
+      </div>
+      <div class="vs-circle">VS</div>
+      <div class="selector-card" id="selector2">
+        <select id="carSelect2" onchange="updateComparison()">
+          <option value="">Select Car 2</option>
+        </select>
+        <div class="selector-preview" id="preview2"></div>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div id="comparisonResult" class="comparison-result" style="display:none;">
+
+      <!-- Quick Summary -->
+      <div class="quick-summary" id="quickSummary"></div>
+
+      <!-- Category Tabs -->
+      <div class="spec-tabs" id="specTabs"></div>
+
+      <!-- Comparison Table -->
+      <div class="comparison-table-wrap">
+        <table class="comparison-table" id="comparisonTable">
+          <thead id="compTableHead"></thead>
+          <tbody id="compTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state">
+      <div class="empty-icon">&#8644;</div>
+      <p>Pick two cars above to see a detailed comparison</p>
+    </div>
+
+    <div class="back-row">
+      <a href="index.html" class="back-btn">&larr; Back to home</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h4>CarDekho</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#new-cars">New Cars</a></li>
+          <li><a href="index.html#used-cars">Used Cars</a></li>
+          <li><a href="index.html#compare">Compare Cars</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 CarDekho Mock Website. For educational purposes only.</div>
+  </footer>
+
+  <script src="compare.js"></script>
+</body>
+</html>

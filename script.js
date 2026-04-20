@@ -223,8 +223,11 @@ function renderBrands() {
 }
 
 function renderComparisons() {
-  document.getElementById('compareGrid').innerHTML = comparisons.map(c => `
-    <div class="compare-card">
+  document.getElementById('compareGrid').innerHTML = comparisons.map(c => {
+    const slug1 = c.car1.name.toLowerCase().replace(/\s+/g, '-');
+    const slug2 = c.car2.name.toLowerCase().replace(/\s+/g, '-');
+    return `
+    <a href="compare.html?car1=${slug1}&car2=${slug2}" class="compare-card">
       <div class="compare-car">
         <img src="${c.car1.image}" alt="${c.car1.name}" loading="lazy">
         <h4>${c.car1.name}</h4>
@@ -236,8 +239,9 @@ function renderComparisons() {
         <h4>${c.car2.name}</h4>
         <div class="price">${c.car2.price}</div>
       </div>
-    </div>
-  `).join('');
+    </a>
+  `;
+  }).join('');
 }
 
 function renderCities() {
